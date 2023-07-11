@@ -1,0 +1,9 @@
+.body {
+    display: grid;
+}
+
+.mat-card {
+    display: grid;
+    min-height: 50px;
+    border-color: black;
+}
