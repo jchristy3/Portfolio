@@ -1,9 +1,39 @@
-.body {
+header {
     display: grid;
+    grid-template-columns: auto min-content;
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    right: 0;
+    background-color: cyan;
+    z-index: 99;
 }
 
-.mat-card {
+.nameplate {
+    margin: 10px;
+}
+
+.nav-list li {
+    display: inline;
+    white-space: nowrap;
+}
+
+.nav-item {
+    margin-left: 15px;
+    margin-right: 15px;
+    border: 1px solid black;
+}
+
+body {
     display: grid;
-    min-height: 50px;
-    border-color: black;
+    height: 100%;
+    padding-top: 50px;
+}
+
+mat-card {
+    display: grid;
+    min-height: 200px;
+    height: 100%;
+    border: 1px solid black;
+    scroll-margin-top: 50px;
 }

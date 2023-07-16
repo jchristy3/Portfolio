@@ -3,24 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
-import { IntroComponent } from './intro/intro.component';
+import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ContactComponent } from './contact/contact.component';
 import { ResumeComponent } from './resume/resume.component';
 import { LinksComponent } from './links/links.component';
-import { NavigatorComponent } from './navigator/navigator.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    IntroComponent,
+    AboutComponent,
     ProjectsComponent,
     SkillsComponent,
     ContactComponent,
     ResumeComponent,
-    LinksComponent,
-    NavigatorComponent
+    LinksComponent
   ],
   imports: [
     BrowserModule,

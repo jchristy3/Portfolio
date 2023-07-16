@@ -1,23 +1,50 @@
 
-<h2>John Christy</h2>
-<app-navigator></app-navigator>
+<header>
+  <h2 class="nameplate">
+    John Christy!
+  </h2>
+  <nav>
+    <div>
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#about-section">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#projects-section">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#skills-section">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#contact-section">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#resume-section">Résumé Download</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#links-section">Other Links</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
 <body>
-  <mat-card>
-    <app-intro></app-intro>
+  <mat-card id="about-section">
+    <app-about #about></app-about>
   </mat-card>
-  <mat-card>
-    <app-projects></app-projects>
+  <mat-card id="projects-section">
+    <app-projects #projects></app-projects>
   </mat-card>
-  <mat-card>
-    <app-skills></app-skills>
+  <mat-card id="skills-section">
+    <app-skills #skills></app-skills>
   </mat-card>
-  <mat-card>
-    <app-contact></app-contact>
+  <mat-card id="contact-section">
+    <app-contact #contact></app-contact>
   </mat-card>
-  <mat-card>
-    <app-resume></app-resume>
+  <mat-card id="resume-section">
+    <app-resume #resume></app-resume>
   </mat-card>
-  <mat-card>
-    <app-links></app-links>
+  <mat-card id="links-section">
+    <app-links #links></app-links>
   </mat-card>
 </body>
