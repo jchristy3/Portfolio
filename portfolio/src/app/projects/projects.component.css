@@ -1,0 +1,21 @@
+.projects-div {
+    display: flex;
+    align-items: stretch;
+}
+
+.scrolling-wrapper {
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    width: 100vw;
+    border: 1px solid black;
+    padding-top: 50px;
+}
+
+.card {
+
+    display: inline-block;
+    border: 1px solid black;
+    min-width: 400px;
+}

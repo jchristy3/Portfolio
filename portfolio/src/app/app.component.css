@@ -28,6 +28,7 @@ body {
     display: grid;
     height: 100%;
     padding-top: 50px;
+    max-width: 100%;
 }
 
 mat-card {
