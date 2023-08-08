@@ -1,6 +1,10 @@
 .projects-div {
     display: flex;
-    align-items: stretch;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    height: 100%;
+    flex-direction: column;
 }
 
 .scrolling-wrapper {
@@ -9,13 +13,13 @@
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
     width: 100vw;
+    height: 100%;
     border: 1px solid black;
-    padding-top: 50px;
 }
 
 .card {
-
     display: inline-block;
     border: 1px solid black;
     min-width: 400px;
+    height: 100%;
 }
