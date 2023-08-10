@@ -9,6 +9,7 @@ export class SkillsComponent {
 
   showDetails: boolean = false;
   showAdvancedFilters: boolean = false;
+  starRating = 0;
 
   constructor(){}
 
