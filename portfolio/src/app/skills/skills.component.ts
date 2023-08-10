@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class SkillsComponent {
 
+  showDetails: boolean = false;
+  showAdvancedFilters: boolean = false;
+
+  constructor(){}
+
+  toggleAdvancedFilters() {
+    this.showAdvancedFilters = !this.showAdvancedFilters;
+  }
 }
