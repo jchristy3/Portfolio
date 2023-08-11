@@ -10,6 +10,8 @@ import { ContactComponent } from './contact/contact.component';
 import { ResumeComponent } from './resume/resume.component';
 import { LinksComponent } from './links/links.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserModule,
     BrowserAnimationsModule,
     MatCardModule,
-    NgbModule
+    NgbModule,
+    MatSelectModule,
+    MatFormFieldModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

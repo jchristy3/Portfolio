@@ -1,10 +1,37 @@
 <div class="search-bar">
     <h1>Skills Search</h1>
-    <input placeholder="Search by tags">
+    <input placeholder="Search by tags"> 
+    <!-- will change above input to a mat-autocomplete with multiselect for tags -->
     <div class="advanced-filters">
-        <button (click)="toggleAdvancedFilters()">Advanced Filters</button>
+        <button (click)="toggleAdvancedFilters()">Advanced Filters & Sorting</button>
         <div *ngIf="showAdvancedFilters">
-            <ngb-rating [max]="5" [(rate)]="starRating" [readonly]="false"></ngb-rating>
+            <div>
+                Experience Level
+                <ngb-rating [max]="5" [(rate)]="starRating" [readonly]="false"></ngb-rating>
+            </div>
+            <div>
+                <mat-form-field>
+                    <mat-label>Years of Experience</mat-label>
+                    <mat-select placeholder="Any">
+                        <mat-option *ngFor="let year of yearsExperience">
+                          {{ year }}
+                        </mat-option>
+                      </mat-select>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field>
+                    <mat-label>Category</mat-label>
+                    <mat-select placeholder="Any">
+                        <mat-option *ngFor="let cat of skillCategories" [value]="cat.value">
+                          {{ cat.viewValue }}
+                        </mat-option>
+                      </mat-select>
+                </mat-form-field>
+            </div>
+            <div>
+
+            </div>
         </div>
     </div>
 </div>
