@@ -1,3 +1,19 @@
 .advanced-filters {
-    min-height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.advanced-filters > div {
+    margin: 10px;
+}
+
+.experience-level {
+    display: inline;
+    justify-content: center;
+    align-items: center;
+}
+
+.sort-div > mat-form-field {
+    margin-left: 5px;
+    margin-right: 5px;
 }

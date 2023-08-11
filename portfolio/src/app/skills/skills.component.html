@@ -2,44 +2,58 @@
     <h1>Skills Search</h1>
     <input placeholder="Search by tags"> 
     <!-- will change above input to a mat-autocomplete with multiselect for tags -->
-    <div class="advanced-filters">
-        <button (click)="toggleAdvancedFilters()">Advanced Filters & Sorting</button>
-        <div *ngIf="showAdvancedFilters">
+    <button (click)="toggleAdvancedFilters()">Advanced Filters & Sorting</button>
+    <div *ngIf="showAdvancedFilters" class="advanced-filters">
+        <div class="experience-level">
+            <div>Experience Level</div>
             <div>
-                Experience Level
                 <ngb-rating [max]="5" [(rate)]="starRating" [readonly]="false"></ngb-rating>
             </div>
-            <div>
-                <mat-form-field>
-                    <mat-label>Years of Experience</mat-label>
-                    <mat-select placeholder="Any">
-                        <mat-option *ngFor="let year of yearsExperience">
-                          {{ year }}
-                        </mat-option>
-                      </mat-select>
-                </mat-form-field>
-            </div>
-            <div>
-                <mat-form-field>
-                    <mat-label>Category</mat-label>
-                    <mat-select placeholder="Any" multiple>
-                        <mat-option *ngFor="let cat of skillCategories" [value]="cat.value">
-                          {{ cat.viewValue }}
-                        </mat-option>
-                      </mat-select>
-                </mat-form-field>
-            </div>
-            <div>
-                <mat-form-field>
-                    <mat-label>Date Last Used</mat-label>
-                    <input matInput [matDatepicker]="picker" placeholder="Choose a cutoff date since last usage">
-                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                    <mat-datepicker #picker></mat-datepicker>
-                </mat-form-field>
-            </div>
-            <div>
-
-            </div>
+        </div>
+        <div>
+            <mat-form-field>
+                <mat-label>Years of Experience</mat-label>
+                <mat-select placeholder="Any">
+                    <mat-option *ngFor="let year of yearsExperience">
+                        {{ year }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <mat-label>Category</mat-label>
+                <mat-select placeholder="Any" multiple>
+                    <mat-option *ngFor="let cat of skillCategories" [value]="cat.value">
+                        {{ cat.viewValue }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <mat-label>Date Last Used</mat-label>
+                <input matInput [matDatepicker]="picker" placeholder="None Selected">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </div>
+        <div class="sort-div">
+            <mat-form-field>
+                <mat-label>Order By</mat-label>
+                <mat-select [(value)]="orderBySelection">
+                    <mat-option [value]="'experience'">Experience Level</mat-option>
+                    <mat-option [value]="'name'">Name</mat-option>
+                    <mat-option [value]="'date'">Date Last Used</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Direction</mat-label>
+                <mat-select [(value)]="orderDirectionSelection">
+                    <mat-option [value]="'ASC'">Ascending</mat-option>
+                    <mat-option [value]="'DESC'">Descending</mat-option>
+                </mat-select>
+            </mat-form-field>
         </div>
     </div>
 </div>

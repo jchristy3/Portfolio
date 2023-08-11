@@ -21,6 +21,8 @@ export class SkillsComponent {
     {value: 'tools', viewValue: 'Tools and Components'},
     {value: 'principle', viewValue: 'Practices and Principles'}
   ];
+  orderBySelection = 'experience';
+  orderDirectionSelection = 'DESC';
 
   constructor(){}
 
