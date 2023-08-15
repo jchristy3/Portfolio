@@ -1,7 +1,8 @@
 <div class="search-bar">
     <h1>Skills Search</h1>
-    <input placeholder="Search by tags"> 
-    <!-- will change above input to a mat-autocomplete with multiselect for tags -->
+    <div>
+        <app-tag-search [allTags]="tags" (applyFilter)="searchSkills($event)"></app-tag-search>
+    </div>
     <button (click)="toggleAdvancedFilters()">Advanced Filters & Sorting</button>
     <div *ngIf="showAdvancedFilters" class="advanced-filters">
         <div class="experience-level">
@@ -58,8 +59,8 @@
     </div>
 </div>
 <div class="skills-grid">
-
-</div>
-<div *ngIf="showDetails" class="skill-details">
-
+    <ul class="list-unstyled card-columns" style="column-count: 4;">
+        <li *ngFor="let skill of skills" (click)="showSkillDetails(skill.id)">{{ skill.name }}</li>
+    </ul>
+    <div *ngIf="showDetails" class="skill-details">Details</div>
 </div>

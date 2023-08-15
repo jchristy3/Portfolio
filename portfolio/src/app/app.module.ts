@@ -15,6 +15,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
+import { TagSearchComponent } from './tag-search/tag-search.component';
+import { NgFor, AsyncPipe } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -24,7 +30,8 @@ import { MatInputModule } from '@angular/material/input';
     SkillsComponent,
     ContactComponent,
     ResumeComponent,
-    LinksComponent
+    LinksComponent,
+    TagSearchComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +42,15 @@ import { MatInputModule } from '@angular/material/input';
     MatFormFieldModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatChipsModule,
+    NgFor,
+    MatIconModule,
+    MatAutocompleteModule,
+    ReactiveFormsModule,
+    AsyncPipe,
   ],
   providers: [],
   bootstrap: [AppComponent]
