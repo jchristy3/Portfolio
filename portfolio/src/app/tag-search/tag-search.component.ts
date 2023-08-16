@@ -51,7 +51,6 @@ export class TagSearchComponent implements OnChanges {
     // Clear the input value
     event.chipInput!.clear();
     this.tagCtrl.setValue(null);
-    console.log("test")
     this.applyFilter.emit(this.tags);
   }
 
@@ -63,6 +62,9 @@ export class TagSearchComponent implements OnChanges {
 
       this.announcer.announce(`Removed ${tag}`);
     }
+
+    
+    this.applyFilter.emit(this.tags);
   }
 
   selected(event: MatAutocompleteSelectedEvent): void {

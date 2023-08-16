@@ -60,7 +60,7 @@
 </div>
 <div class="skills-grid">
     <ul class="list-unstyled card-columns" style="column-count: 4;">
-        <li *ngFor="let skill of skills" (click)="showSkillDetails(skill.id)">{{ skill.name }}</li>
+        <li *ngFor="let skill of skillsShown" (click)="showSkillDetails(skill.id)">{{ skill.name }}</li>
     </ul>
     <div *ngIf="showDetails" class="skill-details">Details</div>
 </div>

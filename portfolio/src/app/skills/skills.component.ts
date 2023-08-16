@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.css']
 })
-export class SkillsComponent {
+export class SkillsComponent implements OnInit {
 
   showDetails: boolean = false;
   showAdvancedFilters: boolean = false;
@@ -26,32 +26,29 @@ export class SkillsComponent {
   skills = [
     {id: 1, name: 'SSRS', experienceLevel: 4, yearsExperience: 3, categories: ['data', 'tools'], tags: ['ssrs', 'sql', 'server', 'reporting', 'services', 'excel', 'microsoft', 'word']},
     {id: 2, name: 'SSMS', experienceLevel: 4, yearsExperience: 5, categories: ['data', 'tools', 'ide'], tags: ['ssms', 'sql', 'server', 'management', 'studio']},
-    {id: 1, name: 'SSRS', experienceLevel: 4, yearsExperience: 3, categories: ['data', 'tools']},
-    {id: 2, name: 'SSMS', experienceLevel: 4, yearsExperience: 5, categories: ['data', 'tools', 'ide']},
-    {id: 1, name: 'SSRS', experienceLevel: 4, yearsExperience: 3, categories: ['data', 'tools']},
-    {id: 2, name: 'SSMS', experienceLevel: 4, yearsExperience: 5, categories: ['data', 'tools', 'ide']},
-    {id: 1, name: 'SSRS', experienceLevel: 4, yearsExperience: 3, categories: ['data', 'tools']},
-    {id: 2, name: 'SSMS', experienceLevel: 4, yearsExperience: 5, categories: ['data', 'tools', 'ide']},
-    {id: 1, name: 'SSRS', experienceLevel: 4, yearsExperience: 3, categories: ['data', 'tools']},
-    {id: 2, name: 'SSMS', experienceLevel: 4, yearsExperience: 5, categories: ['data', 'tools', 'ide']},
-    {id: 1, name: 'SSRS', experienceLevel: 4, yearsExperience: 3, categories: ['data', 'tools']},
-    {id: 2, name: 'SSMS', experienceLevel: 4, yearsExperience: 5, categories: ['data', 'tools', 'ide']},
-    {id: 1, name: 'SSRS', experienceLevel: 4, yearsExperience: 3, categories: ['data', 'tools']},
-    {id: 2, name: 'SSMS', experienceLevel: 4, yearsExperience: 5, categories: ['data', 'tools', 'ide']},
   ];
-  tags = ['ssrs', 'sql', 'server', 'reporting', 'services', 'excel', 'microsoft', 'word','ssms', 'server', 'management', 'studio']
+  skillsShown: any[] = [];
+  tags = ['ssrs', 'sql', 'server', 'reporting', 'services', 'excel', 'microsoft', 'word','ssms', 'server', 'management', 'studio'];
 
   constructor(){}
+
+  ngOnInit(): void {
+    this.skillsShown = Object.assign([{}], this.skills);
+  }
 
   toggleAdvancedFilters() {
     this.showAdvancedFilters = !this.showAdvancedFilters;
   }
 
-  searchSkills($event: any) {
-    console.log($event);
+  searchSkills($event: string[]) {
+    this.skillsShown = Object.assign([{}], this.skills);
+    if ($event.length > 0) {
+      this.skillsShown = Object.assign([{}], this.skillsShown.filter(ss => ss.tags.some((tag: string) => $event.includes(tag))));
+      console.log(this.skillsShown)
+    }
   }
 
   showSkillDetails(id: number) {
-
+    
   }
 }
