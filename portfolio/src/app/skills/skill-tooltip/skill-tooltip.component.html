@@ -2,6 +2,12 @@
   <div class="skill-tooltip"
     [style.top]="topPosition + 'px'"
     [style.left]="leftPosition + 'px'">
-    {{ tooltipSkill.name }}
+    <h1>
+        {{ tooltipSkill.name }}
+    </h1>
+    <div>
+        Experience Level: 
+        <ngb-rating [max]="5" [(rate)]="tooltipSkill.experienceLevel" [readonly]="true"></ngb-rating>
+    </div>
   </div>
 </ng-container>
