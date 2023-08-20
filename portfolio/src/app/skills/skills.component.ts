@@ -29,11 +29,16 @@ export class SkillsComponent implements OnInit {
   ];
   skillsShown: any[] = [];
   tags = ['ssrs', 'sql', 'server', 'reporting', 'services', 'excel', 'microsoft', 'word','ssms', 'server', 'management', 'studio'];
+  showsTooltip: boolean = false;
+  topPosition: any;
+  leftPosition: any;
+  tooltipSkill: any;
 
   constructor(){}
 
   ngOnInit(): void {
     this.skillsShown = Object.assign([{}], this.skills);
+    this.tooltipSkill = this.skills[0];
   }
 
   toggleAdvancedFilters() {
@@ -50,5 +55,19 @@ export class SkillsComponent implements OnInit {
 
   showSkillDetails(id: number) {
     
+  }
+
+  onHover(id: number, $event: MouseEvent) {
+    this.showsTooltip = true;
+    this.tooltipSkill = this.skills.find(x => x.id == id);
+    this.topPosition = $event.clientY - 180;
+    this.leftPosition = $event.clientX;
+  }
+
+  onMouseOut() {
+    this.showsTooltip = false;
+    this.tooltipSkill = null;
+    this.topPosition = null;
+    this.leftPosition = null;
   }
 }

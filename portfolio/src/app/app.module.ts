@@ -21,6 +21,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
+import { SkillTooltipComponent } from './skills/skill-tooltip/skill-tooltip.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { MatIconModule } from '@angular/material/icon';
     ContactComponent,
     ResumeComponent,
     LinksComponent,
-    TagSearchComponent
+    TagSearchComponent,
+    SkillTooltipComponent
   ],
   imports: [
     BrowserModule,

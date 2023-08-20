@@ -43,12 +43,10 @@ export class TagSearchComponent implements OnChanges {
   add(event: MatChipInputEvent): void {
     const value = (event.value || '').trim();
 
-    // Add our tag
     if (value) {
       this.tags.push(value);
     }
 
-    // Clear the input value
     event.chipInput!.clear();
     this.tagCtrl.setValue(null);
     this.applyFilter.emit(this.tags);

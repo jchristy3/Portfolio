@@ -1,0 +1,7 @@
+<ng-container *ngIf="showsTooltip">
+  <div class="skill-tooltip"
+    [style.top]="topPosition + 'px'"
+    [style.left]="leftPosition + 'px'">
+    {{ tooltipSkill.name }}
+  </div>
+</ng-container>
