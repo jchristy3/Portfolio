@@ -29,6 +29,9 @@ export class SkillsComponent implements OnInit {
   skills = [
     {id: 1, name: 'SSRS', experienceLevel: 4, yearsExperience: 3, categories: ['data', 'tools'], tags: ['ssrs', 'sql', 'server', 'reporting', 'services', 'excel', 'microsoft', 'word']},
     {id: 2, name: 'SSMS', experienceLevel: 4, yearsExperience: 5, categories: ['data', 'tools', 'ide'], tags: ['ssms', 'sql', 'server', 'management', 'studio']},
+    {id: 3, name: 'Visual Studio Code', experienceLevel: 4, yearsExperience: 5, categories: ['frontend', 'ide'], tags: ['angular', 'visual', 'studio', 'code', 'vs', 'html', 'css']},
+    {id: 4, name: 'Visual Studio', experienceLevel: 5, yearsExperience: 8, categories: ['ide', 'backend'], tags: ['ssrs', 'c#', 'c++', 'asp.net', '.net', 'unit', 'testing', 'api', 'moq', '2017', '2019', '2022']},
+    {id: 5, name: 'ASP.NET', experienceLevel: 4, yearsExperience: 4, categories: ['data', 'framework', 'backend'], tags: ['asp', '.net', 'asp.net', 'c#', 'sql', 'code-first', 'database-first']},
   ];
   skillsShown: any[] = [];
   tags = ['ssrs', 'sql', 'server', 'reporting', 'services', 'excel', 'microsoft', 'word','ssms', 'server', 'management', 'studio'];
