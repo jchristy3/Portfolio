@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-skills',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent implements OnInit {
+
+  @Output() onSkillHover: EventEmitter<any> = new EventEmitter();
+  @Output() onSkillMouseOut: EventEmitter<any> = new EventEmitter();
 
   showDetails: boolean = false;
   showAdvancedFilters: boolean = false;
@@ -29,16 +32,11 @@ export class SkillsComponent implements OnInit {
   ];
   skillsShown: any[] = [];
   tags = ['ssrs', 'sql', 'server', 'reporting', 'services', 'excel', 'microsoft', 'word','ssms', 'server', 'management', 'studio'];
-  showsTooltip: boolean = false;
-  topPosition: any;
-  leftPosition: any;
-  tooltipSkill: any;
 
   constructor(){}
 
   ngOnInit(): void {
     this.skillsShown = Object.assign([{}], this.skills);
-    this.tooltipSkill = this.skills[0];
   }
 
   toggleAdvancedFilters() {
@@ -57,17 +55,12 @@ export class SkillsComponent implements OnInit {
     
   }
 
-  onHover(id: number, $event: MouseEvent) {
-    this.showsTooltip = true;
-    this.tooltipSkill = this.skills.find(x => x.id == id);
-    this.topPosition = $event.clientY - 180;
-    this.leftPosition = $event.clientX;
+  onHover(id: number, $event: any) {
+    let hoveredSkill = this.skills.find(x => x.id == id);
+    this.onSkillHover.emit({ skill: hoveredSkill, topPosition: $event.pageY, leftPosition: $event.pageX });
   }
 
   onMouseOut() {
-    this.showsTooltip = false;
-    this.tooltipSkill = null;
-    this.topPosition = null;
-    this.leftPosition = null;
+    this.onSkillMouseOut.emit();
   }
 }

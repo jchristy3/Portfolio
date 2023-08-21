@@ -1,4 +1,9 @@
-
+<app-skill-tooltip
+    [showsTooltip]="showsTooltip"
+    [topPosition]="topPosition"
+    [leftPosition]="leftPosition"
+    [tooltipSkill]="tooltipSkill">
+</app-skill-tooltip>
 <header>
   <h2 class="nameplate">
     John Christy!
@@ -36,7 +41,7 @@
     <app-projects #projects></app-projects>
   </mat-card>
   <mat-card id="skills-section">
-    <app-skills #skills></app-skills>
+    <app-skills #skills (onSkillHover)="onSkillHover($event)" (onSkillMouseOut)="onSkillMouseOut()"></app-skills>
   </mat-card>
   <mat-card id="contact-section">
     <app-contact #contact></app-contact>
