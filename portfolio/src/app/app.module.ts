@@ -22,6 +22,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
 import { SkillTooltipComponent } from './skills/skill-tooltip/skill-tooltip.component';
+import { SkillDetailsComponent } from './skills/skill-details/skill-details.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { SkillTooltipComponent } from './skills/skill-tooltip/skill-tooltip.comp
     ResumeComponent,
     LinksComponent,
     TagSearchComponent,
-    SkillTooltipComponent
+    SkillTooltipComponent,
+    SkillDetailsComponent
   ],
   imports: [
     BrowserModule,
