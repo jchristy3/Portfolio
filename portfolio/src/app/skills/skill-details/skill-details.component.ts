@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-skill-details',
@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./skill-details.component.css']
 })
 export class SkillDetailsComponent {
+  @Input() skill!: any;
+  @Output() closeSkillDetails: EventEmitter<any> = new EventEmitter();
 
+  constructor() {}
+
+  closeDetails() {
+    this.closeSkillDetails.emit()
+  }
 }

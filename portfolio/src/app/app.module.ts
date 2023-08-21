@@ -55,6 +55,7 @@ import { SkillDetailsComponent } from './skills/skill-details/skill-details.comp
     MatAutocompleteModule,
     ReactiveFormsModule,
     AsyncPipe,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -59,9 +59,9 @@
     </div>
 </div>
 <div class="skills-grid">
-    <ul class="list-unstyled card-columns" style="column-count: 4;">
+    <ul class="list-unstyled card-columns" [style.column-count]="showDetails ? 2 : 4">
         <li *ngFor="let skill of skillsShown" (click)="showSkillDetails(skill.id)"
             (mouseover)="onHover(skill.id, $event)" (mouseout)="onMouseOut()">{{ skill.name }}</li>
     </ul>
-    <div *ngIf="showDetails" class="skill-details">Details</div>
+    <app-skill-details *ngIf="showDetails" [skill]="skillSelected" (closeSkillDetails)="closeSkillDetails()"></app-skill-details>
 </div>

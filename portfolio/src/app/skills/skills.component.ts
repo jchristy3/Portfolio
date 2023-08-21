@@ -42,6 +42,7 @@ export class SkillsComponent implements OnInit {
   ];
   skillsShown: any[] = [];
   tags = ['ssrs', 'sql', 'server', 'reporting', 'services', 'excel', 'microsoft', 'word','ssms', 'server', 'management', 'studio'];
+  skillSelected: any;
 
   constructor(){}
 
@@ -57,12 +58,16 @@ export class SkillsComponent implements OnInit {
     this.skillsShown = Object.assign([{}], this.skills);
     if ($event.length > 0) {
       this.skillsShown = Object.assign([{}], this.skillsShown.filter(ss => ss.tags.some((tag: string) => $event.includes(tag))));
-      console.log(this.skillsShown)
     }
   }
 
   showSkillDetails(id: number) {
-    
+    this.skillSelected = this.skills.find(x => x.id == id);
+    this.showDetails = true;
+  }
+
+  closeSkillDetails() {
+    this.showDetails = false;
   }
 
   onHover(id: number, $event: any) {
