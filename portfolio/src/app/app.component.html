@@ -21,13 +21,7 @@
           <a class="nav-link" aria-current="page" href="#skills-section">Skills</a>
         </li>
         <li class="list-group-item">
-          <a class="nav-link" aria-current="page" href="#contact-section">Contact</a>
-        </li>
-        <li class="list-group-item">
-          <a class="nav-link" aria-current="page" href="#resume-section">Résumé Download</a>
-        </li>
-        <li class="list-group-item">
-          <a class="nav-link" aria-current="page" href="#links-section">Other Links</a>
+          <a class="nav-link" aria-current="page" href="#links-section">Contact, Resume, & Links</a>
         </li>
       </ul>
     </div>
@@ -42,12 +36,6 @@
   </mat-card>
   <mat-card id="skills-section">
     <app-skills #skills (onSkillHover)="onSkillHover($event)" (onSkillMouseOut)="onSkillMouseOut()"></app-skills>
-  </mat-card>
-  <mat-card id="contact-section">
-    <app-contact #contact></app-contact>
-  </mat-card>
-  <mat-card id="resume-section">
-    <app-resume #resume></app-resume>
   </mat-card>
   <mat-card id="links-section">
     <app-links #links></app-links>

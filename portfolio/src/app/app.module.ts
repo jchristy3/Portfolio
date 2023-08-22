@@ -6,8 +6,6 @@ import { MatCardModule } from '@angular/material/card';
 import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { SkillsComponent } from './skills/skills.component';
-import { ContactComponent } from './contact/contact.component';
-import { ResumeComponent } from './resume/resume.component';
 import { LinksComponent } from './links/links.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatSelectModule } from '@angular/material/select';
@@ -30,8 +28,6 @@ import { SkillDetailsComponent } from './skills/skill-details/skill-details.comp
     AboutComponent,
     ProjectsComponent,
     SkillsComponent,
-    ContactComponent,
-    ResumeComponent,
     LinksComponent,
     TagSearchComponent,
     SkillTooltipComponent,
