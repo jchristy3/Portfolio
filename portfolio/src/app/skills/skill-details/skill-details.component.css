@@ -4,5 +4,7 @@ mat-card {
 
 .header {
     width: 100%;
-    
+    display: grid;
+    grid-template-columns: auto min-content;
+    font-size: 30px;
 }
