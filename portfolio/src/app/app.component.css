@@ -18,22 +18,21 @@ header {
     margin-left: 15px;
     margin-right: 15px;
 }
- 
-.nav-link {
-    border: 1px solid black;
-}
 
 body {
-    display: grid;
     height: 100%;
-    margin-top: 80px;
     max-width: 100%;
 }
 
-mat-card {
+.info-section { 
     display: grid;
-    min-height: 300px;
+    min-height: 800px;
     height: 100%;
-    border: 1px solid black;
     scroll-margin-top: 50px;
 }
+
+.footer {
+    display: grid;
+    height: 100%;
+}
+

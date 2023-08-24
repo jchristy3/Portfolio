@@ -1,14 +1,10 @@
 import {COMMA, ENTER} from '@angular/cdk/keycodes';
-import {Component, ElementRef, ViewChild, inject, Input, Output, EventEmitter, OnChanges} from '@angular/core';
-import {FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatAutocompleteSelectedEvent, MatAutocompleteModule} from '@angular/material/autocomplete';
-import {MatChipInputEvent, MatChipsModule} from '@angular/material/chips';
+import {Component, ElementRef, ViewChild, Input, Output, EventEmitter, OnChanges} from '@angular/core';
+import {FormControl} from '@angular/forms';
+import {MatAutocompleteSelectedEvent} from '@angular/material/autocomplete';
+import {MatChipInputEvent} from '@angular/material/chips';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
-import {MatIconModule} from '@angular/material/icon';
-import {NgFor, AsyncPipe} from '@angular/common';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {LiveAnnouncer} from '@angular/cdk/a11y';
 
 
 @Component({
@@ -26,8 +22,6 @@ export class TagSearchComponent implements OnChanges {
   tags: string[] = [];
 
   @ViewChild('tagInput', {static: true}) tagInput!: ElementRef<HTMLInputElement>;
-
-  announcer = inject(LiveAnnouncer);
 
   constructor() {
     this.filteredTags = this.tagCtrl.valueChanges.pipe(
@@ -57,8 +51,6 @@ export class TagSearchComponent implements OnChanges {
 
     if (index >= 0) {
       this.tags.splice(index, 1);
-
-      this.announcer.announce(`Removed ${tag}`);
     }
 
     
