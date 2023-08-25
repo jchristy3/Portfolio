@@ -28,16 +28,16 @@
   </nav>
 </header>
 <body>
-  <mat-card id="about-section" class="info-section">
+  <div id="about-section" class="info-section">
     <app-about #about></app-about>
-  </mat-card>
-  <mat-card id="projects-section" class="info-section">
+  </div>
+  <div id="projects-section" class="info-section">
     <app-projects #projects></app-projects>
-  </mat-card>
-  <mat-card id="skills-section" class="info-section">
+  </div>
+  <div id="skills-section" class="info-section">
     <app-skills #skills (onSkillHover)="onSkillHover($event)" (onSkillMouseOut)="onSkillMouseOut()"></app-skills>
-  </mat-card>
-  <mat-card id="links-section" class="footer">
+  </div>
+  <div id="links-section" class="footer">
     <app-links #links></app-links>
-  </mat-card>
+  </div>
 </body>
