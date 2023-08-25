@@ -21,4 +21,31 @@
     min-width: 400px;
     height: 80%;
     margin: 10px;
+    text-align: center;
+}
+
+.card > button {
+    height: 7em;
+    /* background-color: transparent; */
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+i {
+    margin-top: .75em;
+    font-size: 10em;
+    float: flex-start;
+}
+
+.project-name {
+    padding-top: 2em;
+   font-size: 3em;
+   z-index: 998;
 }

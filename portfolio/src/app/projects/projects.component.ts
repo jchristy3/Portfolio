@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class ProjectsComponent {
 
+  projects: any = [{name: 'Portfolio', icon: 'fa-solid fa-code fa-2xl', tooltip: 'The repository for this portfolio page', link: 'https://github.com/jchristy3/Portfolio'},
+    {name: 'FPS_Playground', icon: 'fa-brands fa-unity fa-2xl', tooltip: 'Unity test project for learning 3D game development', link: 'https://github.com/jchristy3/FPS_Playground'}                
+  ]
+
+  goToLink(url: string) {
+    window.open(url, "_blank");
+  }
+
+  getIcon(icon: string) {
+    return icon;
+  }
+
 }

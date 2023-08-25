@@ -1,11 +1,13 @@
 <div class="projects-div">
     <h1>Projects</h1>
     <div class="scrolling-wrapper">
-        <div *ngFor="let project of projects" class="card">
-            <button mat-icon-button matTooltip="Email Me!">
-                <i [ngClass]="getProjectIcon(project.iconType)"></i>
+        <div *ngFor="let project of projects" class="card" matTooltip="project.tooltip">
+            <button mat-icon-button matTooltip="Email Me!" (click)="goToLink(project.link)">
+                <i [ngClass]="getIcon(project.icon)"></i>
+                <div class="project-name">
+                    {{project.name}}
+                </div>
             </button>
-            {{project.name}}
         </div>
     </div>
 </div>
