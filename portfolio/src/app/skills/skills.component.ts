@@ -14,7 +14,7 @@ export class SkillsComponent implements OnInit {
   showDetails: boolean = false;
   showAdvancedFilters: boolean = false;
   starRating = 0;
-  yearsExperience: string[] = ['0-1', '1', '2', '3', '4', '5+'];
+  yearsExperience: string[] = ['<1', '1', '2', '3', '4', '5+'];
   skillCategories = [
     {value: 'frontend', viewValue: 'Front-End Development'},
     {value: 'backend', viewValue: 'Back-End Development'},
@@ -69,19 +69,12 @@ export class SkillsComponent implements OnInit {
   searchSkills($event: string[]) {
     this.skillsShown = Object.assign([{}], this.skills);
     if ($event.length > 0) {
-      this.skillsShown = Object.assign([{}], this.skillsShown.filter(ss => ss.tags.some((tag: string) => $event.includes(tag))));
+      this.skillsShown = Object.assign([{}], this.skillsShown.filter(ss => 
+        ss.tags.some((tag: string) => $event.includes(tag))
+        && (!this.experienceLevelInput || ss.experienceLevel == this.experienceLevelInput)
+        && this.verifySkillHasYearsExperience(ss.yearsExperience)
+        ));
     }
-    this.applyAdvancedFilters();
-  }
-
-  applyAdvancedFilters() {
-    console.log('test');
-    console.log(this.experienceLevelInput);
-    console.log(this.yearsExperienceInput);
-    console.log(this.categoryInput);
-    console.log(this.lastUsedInput);
-    console.log(this.orderByInput);
-    console.log(this.orderDirectionInput);
   }
 
   showSkillDetails(id: number) {
@@ -100,5 +93,23 @@ export class SkillsComponent implements OnInit {
 
   onMouseOut() {
     this.onSkillMouseOut.emit();
+  }
+
+  verifySkillHasYearsExperience(yearsExperience: number): boolean {
+    if (this.yearsExperienceInput) {
+      switch (this.yearsExperienceInput) {
+        case '<1': {
+          return yearsExperience < 1;
+        }
+        case '5+': {
+          return yearsExperience >= 5;
+        }
+        default: {
+          return yearsExperience == +this.yearsExperienceInput;
+        }
+      }
+    }
+    else
+      return false;
   }
 }
