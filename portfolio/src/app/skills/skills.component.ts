@@ -45,14 +45,21 @@ export class SkillsComponent implements OnInit {
   tags = ['ssrs', 'sql', 'server', 'reporting', 'services', 'excel', 'microsoft', 'word','ssms', 'server', 'management', 'studio'];
   skillSelected: any;
 
+  experienceLevelInput = 0;
   yearsExperienceInput = '';
   categoryInput: string[] = [];
-  
+  lastUsedInput = new Date;
+  orderByInput = '';
+  orderDirectionInput = 'asc';
 
   constructor(){}
 
   ngOnInit(): void {
     this.skillsShown = Object.assign([{}], this.skills);
+  }
+
+  ngAfterViewInit() {
+    
   }
 
   toggleAdvancedFilters() {
@@ -68,7 +75,13 @@ export class SkillsComponent implements OnInit {
   }
 
   applyAdvancedFilters() {
-
+    console.log('test');
+    console.log(this.experienceLevelInput);
+    console.log(this.yearsExperienceInput);
+    console.log(this.categoryInput);
+    console.log(this.lastUsedInput);
+    console.log(this.orderByInput);
+    console.log(this.orderDirectionInput);
   }
 
   showSkillDetails(id: number) {

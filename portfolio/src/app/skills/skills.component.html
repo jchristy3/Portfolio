@@ -8,14 +8,14 @@
         <div class="experience-level">
             <div>Experience Level</div>
             <div>
-                <ngb-rating [max]="5" [(rate)]="starRating" [readonly]="false"></ngb-rating>
+                <ngb-rating [max]="5" [(rate)]="starRating" [readonly]="false" [(ngModel)]="experienceLevelInput" (rateChange)="applyAdvancedFilters()"></ngb-rating>
             </div>
         </div>
         <div>
             <mat-form-field>
                 <mat-label>Years of Experience</mat-label>
-                <mat-select placeholder="Any" [(ngModel)]="yearsExperienceInput">
-                    <mat-option *ngFor="let year of yearsExperience">
+                <mat-select placeholder="Any" [(ngModel)]="yearsExperienceInput" (selectionChange)="applyAdvancedFilters()">
+                    <mat-option *ngFor="let year of yearsExperience" [value]="year">
                         {{ year }}
                     </mat-option>
                 </mat-select>
@@ -24,7 +24,7 @@
         <div>
             <mat-form-field>
                 <mat-label>Category</mat-label>
-                <mat-select placeholder="Any" multiple [(ngModel)]="categoryInput">
+                <mat-select placeholder="Any" multiple [(ngModel)]="categoryInput" (selectionChange)="applyAdvancedFilters()">
                     <mat-option *ngFor="let cat of skillCategories" [value]="cat.value">
                         {{ cat.viewValue }}
                     </mat-option>
@@ -34,7 +34,7 @@
         <div>
             <mat-form-field>
                 <mat-label>Used Since</mat-label>
-                <input matInput [matDatepicker]="picker" placeholder="None Selected" [(ngModel)]="lastUsedControl">
+                <input matInput [matDatepicker]="picker" placeholder="None Selected" [(ngModel)]="lastUsedInput" (dateChange)="applyAdvancedFilters()">
                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
@@ -42,7 +42,7 @@
         <div class="sort-div">
             <mat-form-field>
                 <mat-label>Order By</mat-label>
-                <mat-select [(value)]="orderBySelection" [(ngModel)]="orderByControl">
+                <mat-select [(value)]="orderBySelection" [(ngModel)]="orderByInput" (selectionChange)="applyAdvancedFilters()">
                     <mat-option [value]="'experience'">Experience Level</mat-option>
                     <mat-option [value]="'name'">Name</mat-option>
                     <mat-option [value]="'date'">Date Last Used</mat-option>
@@ -50,7 +50,7 @@
             </mat-form-field>
             <mat-form-field>
                 <mat-label>Direction</mat-label>
-                <mat-select [(value)]="orderDirectionSelection" [(ngModel)]="orderDirectionControl">
+                <mat-select [(value)]="orderDirectionSelection" [(ngModel)]="orderDirectionInput" (selectionChange)="applyAdvancedFilters()">
                     <mat-option [value]="'ASC'">Ascending</mat-option>
                     <mat-option [value]="'DESC'">Descending</mat-option>
                 </mat-select>
