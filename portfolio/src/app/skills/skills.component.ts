@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-skills',
@@ -44,6 +45,10 @@ export class SkillsComponent implements OnInit {
   tags = ['ssrs', 'sql', 'server', 'reporting', 'services', 'excel', 'microsoft', 'word','ssms', 'server', 'management', 'studio'];
   skillSelected: any;
 
+  yearsExperienceInput = '';
+  categoryInput: string[] = [];
+  
+
   constructor(){}
 
   ngOnInit(): void {
@@ -59,6 +64,11 @@ export class SkillsComponent implements OnInit {
     if ($event.length > 0) {
       this.skillsShown = Object.assign([{}], this.skillsShown.filter(ss => ss.tags.some((tag: string) => $event.includes(tag))));
     }
+    this.applyAdvancedFilters();
+  }
+
+  applyAdvancedFilters() {
+
   }
 
   showSkillDetails(id: number) {

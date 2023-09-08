@@ -14,7 +14,7 @@
         <div>
             <mat-form-field>
                 <mat-label>Years of Experience</mat-label>
-                <mat-select placeholder="Any">
+                <mat-select placeholder="Any" [(ngModel)]="yearsExperienceInput">
                     <mat-option *ngFor="let year of yearsExperience">
                         {{ year }}
                     </mat-option>
@@ -24,7 +24,7 @@
         <div>
             <mat-form-field>
                 <mat-label>Category</mat-label>
-                <mat-select placeholder="Any" multiple>
+                <mat-select placeholder="Any" multiple [(ngModel)]="categoryInput">
                     <mat-option *ngFor="let cat of skillCategories" [value]="cat.value">
                         {{ cat.viewValue }}
                     </mat-option>
@@ -33,8 +33,8 @@
         </div>
         <div>
             <mat-form-field>
-                <mat-label>Date Last Used</mat-label>
-                <input matInput [matDatepicker]="picker" placeholder="None Selected">
+                <mat-label>Used Since</mat-label>
+                <input matInput [matDatepicker]="picker" placeholder="None Selected" [(ngModel)]="lastUsedControl">
                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
@@ -42,7 +42,7 @@
         <div class="sort-div">
             <mat-form-field>
                 <mat-label>Order By</mat-label>
-                <mat-select [(value)]="orderBySelection">
+                <mat-select [(value)]="orderBySelection" [(ngModel)]="orderByControl">
                     <mat-option [value]="'experience'">Experience Level</mat-option>
                     <mat-option [value]="'name'">Name</mat-option>
                     <mat-option [value]="'date'">Date Last Used</mat-option>
@@ -50,7 +50,7 @@
             </mat-form-field>
             <mat-form-field>
                 <mat-label>Direction</mat-label>
-                <mat-select [(value)]="orderDirectionSelection">
+                <mat-select [(value)]="orderDirectionSelection" [(ngModel)]="orderDirectionControl">
                     <mat-option [value]="'ASC'">Ascending</mat-option>
                     <mat-option [value]="'DESC'">Descending</mat-option>
                 </mat-select>
