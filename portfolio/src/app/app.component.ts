@@ -14,7 +14,6 @@ export class AppComponent {
   tooltipSkill: any;
 
   onSkillHover($event: any) {
-    console.log()
     this.showsTooltip = true;
     this.tooltipSkill = $event.skill;
     this.topPosition = $event.topPosition;
