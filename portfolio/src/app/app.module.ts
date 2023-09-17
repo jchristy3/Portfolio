@@ -21,6 +21,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
 import { SkillTooltipComponent } from './skills/skill-tooltip/skill-tooltip.component';
 import { SkillDetailsComponent } from './skills/skill-details/skill-details.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { SkillDetailsComponent } from './skills/skill-details/skill-details.comp
     MatAutocompleteModule,
     ReactiveFormsModule,
     AsyncPipe,
-    MatIconModule
+    MatIconModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

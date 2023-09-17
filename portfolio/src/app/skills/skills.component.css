@@ -24,3 +24,10 @@
     margin-right: 15px;
     margin-left: 15px;
 }
+
+.reset-div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 15px;
+}
