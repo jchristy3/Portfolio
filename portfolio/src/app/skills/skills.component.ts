@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { formatDate } from '@angular/common';
+import { Skill } from 'src/models/skill';
 
 @Component({
   selector: 'app-skills',
@@ -29,7 +30,7 @@ export class SkillsComponent implements OnInit {
   orderDirectionSelection = 'DESC';
   currentDate: Date = new Date();
   //currentDate: string = formatDate(new Date(), 'yyyy-MM-dd', 'en-US');
-  skills = [
+  skills: Skill[] = [
     {id: 1, name: 'SSRS', experienceLevel: 4, yearsExperience: 3, lastUsed: this.currentDate, description: 'test description', categories: ['data', 'tools'], tags: ['ssrs', 'sql', 'server', 'reporting', 'services', 'excel', 'microsoft', 'word']},
     {id: 2, name: 'SSMS', experienceLevel: 4, yearsExperience: 5, lastUsed: this.currentDate, description: 'test description', categories: ['data', 'tools', 'ide'], tags: ['ssms', 'sql', 'server', 'management', 'studio']},
     {id: 3, name: 'Visual Studio Code', experienceLevel: 4, yearsExperience: 5, lastUsed: this.currentDate, description: 'test description', categories: ['frontend', 'ide'], tags: ['angular', 'visual', 'studio', 'code', 'vs', 'html', 'css']},

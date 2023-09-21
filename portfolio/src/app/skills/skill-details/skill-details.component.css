@@ -3,8 +3,27 @@ mat-card {
 }
 
 .header {
-    width: 100%;
+    width: auto;
     display: grid;
     grid-template-columns: auto min-content;
     font-size: 30px;
+    margin-left: 5px;
+}
+
+.details {
+    margin: 5px;
+}
+
+.description-card {
+    width: auto;
+}
+
+.description-card > mat-card-header {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.description {
+    font-size: .75em;
+    font-style: italic;
 }
