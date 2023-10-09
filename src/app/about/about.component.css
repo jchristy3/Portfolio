@@ -1,0 +1,30 @@
+.header-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+.intro-paragraph {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 10%;
+    font-style: italic;
+}
+
+/*picture should be vertically in the middle and to the left of the About paragraph*/
+.profile-pic {
+    width: 400px;
+    height: 400px;
+    border-radius: 80%;
+    margin: 20px;
+    float: left;
+    margin-top: 10%;
+    margin-left: 5%;
+}
+
+.about-div {
+    display: inline;
+    height: 100vw;
+}

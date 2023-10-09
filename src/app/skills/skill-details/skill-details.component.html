@@ -1,0 +1,29 @@
+<mat-card>
+    <div class="header">
+        {{skill.name}}
+        <button mat-icon-button (click)="closeDetails()">
+            <mat-icon>close</mat-icon>
+        </button>
+    </div>
+    <div class="details">
+        <div>
+            Experience Level:
+            <ngb-rating [max]="5" [(rate)]="skill.experienceLevel" [readonly]="true"></ngb-rating>
+        </div>
+        <div>
+            Years of Experience:
+            <b>{{ skill.yearsExperience }}</b>
+        </div>
+        <br/>
+        <div>
+            <mat-card class="description-card">
+                <mat-card-header>
+                    Description:
+                </mat-card-header>
+                <mat-card-content class="description">
+                    {{ skill.description }}
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</mat-card>

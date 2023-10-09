@@ -1,0 +1,37 @@
+.advanced-filters {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.advanced-filters > div {
+    margin: 10px;
+}
+
+.experience-level {
+    display: inline;
+    justify-content: center;
+    align-items: center;
+}
+
+.sort-div > mat-form-field {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: auto max-content;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.reset-div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+li:hover {
+    cursor: pointer;
+}

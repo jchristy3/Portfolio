@@ -1,0 +1,43 @@
+<app-skill-tooltip
+    [showsTooltip]="showsTooltip"
+    [topPosition]="topPosition"
+    [leftPosition]="leftPosition"
+    [tooltipSkill]="tooltipSkill">
+</app-skill-tooltip>
+<header>
+  <h2 class="nameplate">
+    John Christy
+  </h2>
+  <nav>
+    <div>
+      <ul class="list-group list-group-horizontal">
+        <li class="list-group-item">
+          <a class="nav-link" aria-current="page" href="#about-section">About</a>
+        </li>
+        <li class="list-group-item">
+          <a class="nav-link" aria-current="page" href="#projects-section">Projects</a>
+        </li>
+        <li class="list-group-item">
+          <a class="nav-link" aria-current="page" href="#skills-section">Skills</a>
+        </li>
+        <li class="list-group-item">
+          <a class="nav-link" aria-current="page" href="#links-section">Contact, Resume, & Links</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<body>
+  <div id="about-section" class="info-section">
+    <app-about #about></app-about>
+  </div>
+  <div id="projects-section" class="info-section">
+    <app-projects #projects></app-projects>
+  </div>
+  <div id="skills-section" class="info-section">
+    <app-skills #skills (onSkillHover)="onSkillHover($event)" (onSkillMouseOut)="onSkillMouseOut()"></app-skills>
+  </div>
+  <div id="links-section" class="footer">
+    <app-links #links></app-links>
+  </div>
+</body>

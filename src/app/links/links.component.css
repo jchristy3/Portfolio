@@ -1,0 +1,28 @@
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: center;
+    height: 100%;
+}
+
+.link-panel {
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+    height: 6em;
+}
+
+.link-panel > button {
+    height: 7em;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+i {
+    font-size: 5em;
+}
