@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class LinksComponent {
 
   downloadResume() {
-    window.open('/Portfolio/assets/Resume.pdf', '_blank');
+    window.open('/assets/Resume.pdf', '_blank');
   }
 
 }
