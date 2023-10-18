@@ -1,7 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { formatDate } from '@angular/common';
 import { Skill } from 'src/models/skill';
-import { SKILLS, TAGS, CATEGORIES } from 'src/constants/skills-constants';
+import { SKILLS, CATEGORIES } from 'src/constants/skills-constants';
 
 @Component({
   selector: 'app-skills',
@@ -22,7 +22,7 @@ export class SkillsComponent implements OnInit {
   orderDirectionSelection = 'DESC';
   skills: Skill[] = SKILLS;
   skillsShown: any[] = [];
-  tags = TAGS;
+  tags: string[] = [];
   skillSelected: any;
   tagsSelected: string[] = [];
 
@@ -37,6 +37,7 @@ export class SkillsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.setTags();
     this.skillsShown = Object.assign([{}], this.skills.sort((a, b) => this.sortSkills(a, b)));
   }
 
@@ -44,12 +45,15 @@ export class SkillsComponent implements OnInit {
     
   }
 
+  setTags() {
+    this.tags = this.skills.map(skill => skill.tags).flat().filter((tag, index, self) => self.indexOf(tag) === index);
+  }
+
   toggleAdvancedFilters() {
     this.showAdvancedFilters = !this.showAdvancedFilters;
   }
 
   searchSkills($event: string[]) {
-    console.log(this.skills)
     this.tagsSelected = $event;
     this.skillsShown = Object.assign([{}], this.skills.filter(ss => 
       (ss.tags.some(tag => !$event.length || $event.includes(tag)))

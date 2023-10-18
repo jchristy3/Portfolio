@@ -49,7 +49,7 @@ export const SKILLS: Skill[] = [
     {id: 14, name: 'Git', experienceLevel: 4, yearsExperience: 5, lastUsed: new Date(),
         description: 'I use Git on a daily basis in my current position. I have used it for both personal and professional projects. I am familiar with the Git CLI, as well as the Git GUI. My preferred Git GUI is GitHub Desktop.',
         categories: ['tools', 'source-control'], tags: ['git', 'github', 'source', 'control', 'cli', 'gui', 'github-desktop']},
-    {id: 15, name: 'Git', experienceLevel: 4, yearsExperience: 2, lastUsed: new Date(),
+    {id: 15, name: 'GitHub Desktop', experienceLevel: 4, yearsExperience: 2, lastUsed: new Date(),
         description: 'I use GitHub Desktop daily to manage source control of both personal and professional repositories.',
         categories: ['tools', 'source-control'], tags: ['git', 'github', 'source', 'control', 'cli', 'gui', 'github-desktop']},
     {id: 16, name: 'Asynchronous APIs', experienceLevel: 2, yearsExperience: .5, lastUsed: new Date(),
@@ -88,17 +88,31 @@ export const SKILLS: Skill[] = [
     {id: 27, name: 'GitHub Copilot', experienceLevel: 1, yearsExperience: 1, lastUsed: new Date(),
         description: "This portfolio is actually the first time I've used GitHub Copilot. I've been using it to generate the descriptions for each skill. I've been very impressed with it so far, and I'm excited to see how it improves over time. It even helped me write this description!",
         categories: ['tools'], tags: ['github', 'copilot', 'ai', 'artificial', 'intelligence', 'code', 'generation']},
+    {id: 28, name: 'Javascript', experienceLevel: 1, yearsExperience: 1, lastUsed: new Date('2020-02-28'),
+        description: "Last used this in my position at AGDATA. While it's been a minute since I touched Javascript, I'm confident I could pick it back up quickly, especially considering my daily use of Typescript, which is based on Javascript.",
+        categories: ['languages', 'frontend'], tags: ['javascript', 'visual', 'studio', 'code', 'visual-studio-code']},
+    {id: 29, name: 'jQuery', experienceLevel: 1, yearsExperience: 1, lastUsed: new Date('2020-02-28'),
+        description: "Last used this in my position at AGDATA. While it's been a minute since I touched jQuery, I'm confident I could pick it back up quickly.",
+        categories: ['misc', 'frontend'], tags: ['jquery', 'javascript', 'visual', 'studio', 'code', 'visual-studio-code']},
+    {id: 30, name: 'SQL', experienceLevel: 1, yearsExperience: 1, lastUsed: new Date(),
+        description: "I use SQL on a daily bases (specifically T-SQL). I am very comfortable writing complex queries, and I am familiar with the best-practices for writing performant queries.",
+        categories: ['language', 'backend', 'data'], tags: ['sql', 't-sql', 'query', 'database', 'microsoft', 'server', 'ssms', 'ssis', 'ssrs']},
+    {id: 31, name: 'Python', experienceLevel: 1, yearsExperience: 0, lastUsed: new Date(),
+        description: "I've only really played around with Python in my free time. I used it in a small project for running a sprinkler system on a Raspberry Pi.",
+        categories: ['language'], tags: ['python', 'raspberry', 'pi', 'raspberry-pi']},
+    {id: 32, name: 'Assembly x86', experienceLevel: 1, yearsExperience: .5, lastUsed: new Date('2018-04-30'),
+        description: "I used Assembly x86 in a computer architecture class in college. I haven't used it since, but actually found it quite enjoyable.",
+        categories: ['language'], tags: ['assembly', 'x86', 'computer', 'architecture']},
+    {id: 33, name: 'Haskell', experienceLevel: 1, yearsExperience: .5, lastUsed: new Date('2018-04-30'),
+        description: "I used Haskell for a digital systems engineering class in which we simulated a microwave oven display on a PIC18 microcontroller. Like Assembly x86, I thoroughly enjoyed using Haskell, but haven't used it since.",
+        categories: ['language'], tags: ['assembly', 'haskell', 'computer', 'architecture', 'pic18', 'microcontroller']},
+    {id: 34, name: 'Redis', experienceLevel: 1, yearsExperience: .25, lastUsed: new Date('2018-07-30'),
+        description: "Setup a Redis server as part of training program when I started with AGDATA. I haven't used it since.",
+        categories: ['backend', 'data'], tags: ['redis', 'database', 'server']},
+    {id: 36, name: 'Eclipse', experienceLevel: 4, yearsExperience: 4, lastUsed: new Date('2018-04-30'),
+        description: "Used Eclipse regularly in college. I've used it sparingly since.",
+        categories: ['ide'], tags: ['eclipse', 'ide', 'java']},
   ];
-
-export const TAGS: string[] = ['ssrs', 'sql', 'server', 'reporting', 'services', 'excel', 'microsoft', 'word','ssms', 'server',
-    'management', 'studio', 'visual', 'code', 'vs', 'html', 'css', 'asp', '.net', 'unit', 'testing', 'api', 'moq', '2017', '2019',
-    '2022', 'c#', 'c++', 'asp.net', 'typescript', 'angular', 'visual-studio', 'visual-studio-code', 'database-first', 'code-first',
-    'azure', 'cloud', 'microsoft', 'certification', '.net-framework', 'linq', 'entity', 'framework', 'source', 'control', 'cli',
-    'gui', 'github-desktop', 'batch', 'windows', 'command', 'prompt', 'cmd', 'mvc', 'mvvc', 'model', 'view', 'controller',
-    'viewmodel', 'pair-programming', 'pair', 'programming', 'best-practices', 'collaboration', 'teamwork', 'leadership', 'java', 'moq',
-    'unit-testing', 'jasmine', 'karma', 'ssis', 'integration', 'rest', 'api', 'web', 'sonarqube', 'quality', 'code', 'smells', 'bugs',
-    'ci-cd', 'selenium', 'testing', 'automation', 'behavior-driven-design', 'bdd'
-];
 
 export const CATEGORIES: any[] = [
     {value: 'frontend', viewValue: 'Front-End Development'},
@@ -112,5 +126,5 @@ export const CATEGORIES: any[] = [
     {value: 'cloud', viewValue: 'Cloud Tools & Services'},
     {value: 'components', viewValue: 'Components'},
     {value: 'source-control', viewValue: 'Source Control'},
-    {value: 'misc-knowledge', viewValue: 'Miscellaneous Knowledge'}
+    {value: 'misc', viewValue: 'Miscellaneous'}
   ];
