@@ -115,6 +115,9 @@ export const SKILLS: Skill[] = [
     {id: 37, name: 'GDScript', experienceLevel: 1, yearsExperience: 0, lastUsed: new Date(),
         description: "While Godot does support the use of C#, I wanted to explore a new language, and learned that GDScript had much more support when learning Godot. Thus far, I find it very intuitive and enjoyable to use.",
         categories: ['languages'], tags: ['gdscript', 'godot', 'game']},
+    {id: 38, name: 'Jira', experienceLevel: 3, yearsExperience: 3, lastUsed: new Date(),
+        description: "I use Jira on a daily basis in my current position for ticket management and tracking. I am very flexible in using different strategies for managing tickets, as I've used it while working with multiple different teams, and had to adjust my style for each.",
+        categories: ['languages'], tags: ['gdscript', 'godot', 'game']},
   ];
 
 export const CATEGORIES: any[] = [
