@@ -1,7 +1,7 @@
 import { Skill } from '../models/skill';
 
 export const SKILLS: Skill[] = [
-    {id: 1, name: 'SSRS', experienceLevel: 4, yearsExperience: 3, lastUsed: new Date(), 
+    {id: 1, name: 'SSRS', experienceLevel: 4, yearsExperience: 4, lastUsed: new Date(), 
         description: "I use SSRS on a daily basis in my current position. I use it to create reports for the web application I maintain. I am very comfortable with the tool, and have used it to create a wide variety of reports. I have also used it to create Excel and Word templates for exporting data from the web application I maintain.", 
         categories: ['data', 'tools'], tags: ['ssrs', 'sql', 'server', 'reporting', 'services', 'excel', 'microsoft', 'word']},
     {id: 2, name: 'SSMS', experienceLevel: 4, yearsExperience: 5, lastUsed: new Date(),
@@ -13,10 +13,10 @@ export const SKILLS: Skill[] = [
     {id: 4, name: 'Visual Studio', experienceLevel: 5, yearsExperience: 8, lastUsed: new Date(),
         description: "I've used Visual Studio since creating a simple C++ application for a school project back in grade school. In my day-to-day now, I use it for all C# and SSRS applications.",
         categories: ['ide', 'backend'], tags: ['ssrs', 'c#', 'c++', 'asp.net', '.net', 'unit', 'testing', 'api', 'moq', '2017', '2019', '2022']},
-    {id: 5, name: 'ASP.NET', experienceLevel: 4, yearsExperience: 4, lastUsed: new Date(),
+    {id: 5, name: 'ASP.NET', experienceLevel: 4, yearsExperience: 5, lastUsed: new Date(),
         description: 'I first encountered ASP.NET while working at AGDATA. I am very comfortable using it to create web applications and APIs, epsecially when paired with Entity Framework and LINQ.',
         categories: ['data', 'framework', 'backend'], tags: ['asp', '.net', 'asp.net', 'c#', 'sql', 'code-first', 'database-first']},
-    {id: 6, name: 'C#', experienceLevel: 4, yearsExperience: 4, lastUsed: new Date(),
+    {id: 6, name: 'C#', experienceLevel: 4, yearsExperience: 5, lastUsed: new Date(),
         description: "I use C# on a daily basis in my current position. I use it to create the back-end of the web application I maintain. I am very comfortable with the language, and have used it to create web applications, web APIs, and console applications. I have used it with both .NET Framework and .NET Core, and typically paired with Entity Framework for data retrieval from a SQL database, and Moq for unit testing. I've also used it in my spare time to play around with Unity's game engine.",
         categories: ['data', 'language', 'backend'], tags: ['asp', '.net', 'asp.net', 'c#', 'visual-studio']},
     {id: 7, name: 'Typescript', experienceLevel: 4, yearsExperience: 4, lastUsed: new Date(),
@@ -34,16 +34,16 @@ export const SKILLS: Skill[] = [
     {id: 9, name: 'Bootstrap', experienceLevel: 2, yearsExperience: 2, lastUsed: new Date(),
         description: "While I've used Bootstrap for some time now, I've only recently dedicated time to learning it in depth. I've been using it in my current position to create a responsive web application.",
         categories: ['frontend', 'tools'], tags: ['bootstrap', 'visual', 'studio', 'code', 'visual-studio-code', 'css', 'html', 'angular']},
-    {id: 10, name: '.NET Framework', experienceLevel: 4, yearsExperience: 4, lastUsed: new Date(),
+    {id: 10, name: '.NET Framework', experienceLevel: 4, yearsExperience: 5, lastUsed: new Date(),
         description: 'I use .NET Framework in my current position. It is probably the technology I am most familiar with. I have used it to create web applications, web APIs, and console applications. I have used it with C#, and typically paired with Entity Framework for data retrieval from a SQL database, and Moq for unit testing.',
         categories: ['backend', 'framework'], tags: ['.net', 'asp', '.net', 'asp.net', 'c#', 'sql', 'code-first', 'database-first']},
     {id: 11, name: 'Azure', experienceLevel: 1, yearsExperience: 0, lastUsed: new Date('2022-09-14'),
         description: 'I completed certification for Azure fundamentals in September 2021. I have not yet had the opportunity to use Azure in a professional setting, but I am eager to do so.',
         categories: ['cloud', 'tools'], tags: ['azure', 'cloud', 'microsoft', 'certification']},
-    {id: 12, name: 'LINQ', experienceLevel: 3, yearsExperience: 3, lastUsed: new Date(),
+    {id: 12, name: 'LINQ', experienceLevel: 3, yearsExperience: 5, lastUsed: new Date(),
         description: 'I really enjoy using LINQ and while I used it more heavily in past positions, I do still get to use LINQ on Entity Framework Enumerables for business logic.',
         categories: ['backend', 'components'], tags: ['linq', 'c#', 'asp.net', 'asp', '.net', '.net-framework']},
-    {id: 13, name: 'Entity Framework', experienceLevel: 4, yearsExperience: 5, lastUsed: new Date(),
+    {id: 13, name: 'Entity Framework', experienceLevel: 5, yearsExperience: 5, lastUsed: new Date(),
         description: 'I use Entity Framework on a regular basis in .NET Framework applications, and have been using it as such since the start of my career. I have used it with both database-first and code-first approaches, but definitely prefer code-first.',
         categories: ['backend', 'framework'], tags: ['entity', 'framework', 'c#', 'asp.net', 'asp', '.net', '.net-framework', 'code-first', 'database-first']},
     {id: 14, name: 'Git', experienceLevel: 4, yearsExperience: 5, lastUsed: new Date(),
@@ -118,6 +118,9 @@ export const SKILLS: Skill[] = [
     {id: 38, name: 'Jira', experienceLevel: 3, yearsExperience: 3, lastUsed: new Date(),
         description: "I use Jira on a daily basis in my current position for ticket management and tracking. I am very flexible in using different strategies for managing tickets, as I've used it while working with multiple different teams, and had to adjust my style for each.",
         categories: ['tools'], tags: ['jira', 'ticket', 'management', 'tracking', 'agile', 'scrum']},
+    {id: 39, name: 'Telerik Kendo UI', experienceLevel: 2, yearsExperience: 2, lastUsed: new Date('2020-02-28'),
+        description: "I used Telerik in my previous position at AGDATA. Quite frankly I hated using it as it was constantly a pain and I found it very inflexible.",
+        categories: ['components'], tags: ['telerik', 'kendo', 'ui', 'javascript', '.net']},
   ];
 
 export const CATEGORIES: any[] = [
