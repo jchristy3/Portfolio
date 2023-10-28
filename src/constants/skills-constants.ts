@@ -117,7 +117,7 @@ export const SKILLS: Skill[] = [
         categories: ['languages'], tags: ['gdscript', 'godot', 'game']},
     {id: 38, name: 'Jira', experienceLevel: 3, yearsExperience: 3, lastUsed: new Date(),
         description: "I use Jira on a daily basis in my current position for ticket management and tracking. I am very flexible in using different strategies for managing tickets, as I've used it while working with multiple different teams, and had to adjust my style for each.",
-        categories: ['languages'], tags: ['gdscript', 'godot', 'game']},
+        categories: ['tools'], tags: ['jira', 'ticket', 'management', 'tracking', 'agile', 'scrum']},
   ];
 
 export const CATEGORIES: any[] = [
