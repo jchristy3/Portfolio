@@ -41,10 +41,6 @@ export class SkillsComponent implements OnInit {
     this.skillsShown = Object.assign([{}], this.skills.sort((a, b) => this.sortSkills(a, b)));
   }
 
-  ngAfterViewInit() {
-    
-  }
-
   setTags() {
     this.tags = this.skills.map(skill => skill.tags).flat().filter((tag, index, self) => self.indexOf(tag) === index);
   }
